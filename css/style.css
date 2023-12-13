@@ -1,0 +1,450 @@
+/* Set base font size and family for better consistency */
+html {
+  font-size: 62.5%; /* Set font size to 62.5% for easy rem calculations (1rem = 10px) */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif;
+}
+
+/* Reset default margin and padding for body and html */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll due to hidden overflow */
+}
+
+/* Style for the main body */
+body {
+  font-family: "Arial", sans-serif; /* Explicitly set the font-family for the body */
+  font-size: 1.8rem; /* Adjusted from 18px for better readability and consistency */
+  line-height: 1.618; /* Golden ratio for improved line spacing */
+  margin: 0;
+  padding: 13px; /* Adjusted padding for better spacing inside the body */
+  text-align: center;
+  background-color: #121212; /* Dark background color */
+  color: rgb(143, 113, 179); /* Light text color */
+  min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+}
+
+/* Container for centering content */
+.container {
+  width: 95%;
+  max-width: 1024px;
+  margin: 0 auto; /* Centering the content horizontally */
+}
+
+/* Clearfix for pseudo-elements */
+*:before,
+*:after {
+  content: "";
+}
+
+/* Horizontal rule styling */
+hr {
+  border: 0;
+  margin: 1.35em auto;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
+}
+
+/* Fade effect styling */
+.fade {
+  height: 1px;
+  color: rgb(158, 113, 179);
+  background-image: linear-gradient(
+    90deg,
+    rgba(158, 113, 179, 0),
+    rgba(158, 113, 179, 1) 50%,
+    rgba(158, 113, 179, 0) 100%
+  );
+}
+
+/* Styling for images */
+img {
+  max-width: 100%; /* Ensure the image doesn't exceed its natural size */
+  max-height: 80vh; /* Limit the image height to 80% of the viewport height */
+  width: auto; /* Make sure the image retains its aspect ratio */
+  height: auto; /* Make sure the image retains its aspect ratio */
+  border-radius: 10px;
+}
+
+/*Buttons*/
+/* Button-34 styling */
+.button-34 {
+  background: #5e5df0;
+  border-radius: 999px; /* Circular border radius */
+  box-shadow: #5e5df0 0 10px 20px -10px; /* Box shadow for a subtle lift effect */
+  box-sizing: border-box;
+  color: #ffffff; /* Text color */
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji,
+    "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700; /* Bold font weight */
+  line-height: 24px; /* Adjusted line height for better spacing */
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px; /* Padding for inner content */
+  user-select: none; /* Disable text selection */
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content; /* Adjust width to fit content */
+  word-break: break-word; /* Break word if it exceeds container width */
+  border: 0;
+}
+
+/* Button-89 styling */
+.button-89 {
+  --b: 3px; /* Border thickness */
+  --s: 0.45em; /* Size of the corner */
+  --color: #5e5df0;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p)
+    var(--_p) / calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+/* Button-89 hover and focus styling */
+.button-89:hover,
+.button-89:focus-visible {
+  --_p: 0px; /* Adjust padding on hover/focus */
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+/* Button-89 active styling */
+.button-89:active {
+  background: var(--color);
+  color: #fff; /* Text color on active state */
+}
+
+/* Button links styling */
+.button-34 a,
+.button-89 a {
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Button-89 link styling */
+.button-89 a {
+  color: #5e5df0; /* Link color */
+}
+
+/* Button-62 styling */
+.button-62 {
+  background: linear-gradient(to bottom right, #6047ef, #b55aff); /* Gradient background */
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff; /* Text color */
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500; /* Semi-bold font weight */
+  line-height: 2.5; /* Adjusted line height for better spacing */
+  outline: transparent;
+  padding: 0 1rem; /* Padding for inner content */
+  text-align: center;
+  text-decoration: none; /* Remove underline from text */
+  transition: box-shadow 0.2s ease-in-out; /* Smooth transition for box shadow */
+  user-select: none; /* Disable text selection */
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap; /* Prevent line break */
+  margin-top: 5px;
+}
+
+/* Button-62 focus styling */
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(112, 90, 255, 0.5);
+}
+
+/* Button-62 hover styling */
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(153, 90, 255, 0.5);
+}
+
+/* Navigation bar styling */
+nav {
+  position: fixed; /* Fix the navigation bar at the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 10px 90px; /* Add padding inside the navigation bar */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  border-bottom: 1px solid rgb(146, 71, 211); /* Purple border at the bottom */
+  color: white; /* Text color */
+}
+
+/* Logo styling in navigation */
+nav .logo {
+  padding: 22px 20px; /* Adjust padding for the logo */
+  line-height: 0px; /* Remove any default line height */
+  float: left; /* Align the logo to the left */
+  font-size: 22px; /* Font size for the logo */
+  font-weight: bold; /* Bold font weight for the logo */
+  text-transform: uppercase; /* Convert text to uppercase */
+}
+
+/* Styling for navigation links */
+nav ul {
+  list-style: none; /* Remove default list styles */
+  float: right; /* Align the list to the right */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Use flexbox for layout */
+}
+
+nav ul li a {
+  line-height: 40px; /* Adjust line height for the links */
+  color: #fff; /* Text color for links */
+  padding: 12px 30px; /* Padding for each link */
+  text-decoration: none; /* Remove underlines from links */
+  font-size: 14px; /* Font size for the links */
+  font-weight: bold; /* Bold font weight for the links */
+  text-transform: uppercase; /* Convert text to uppercase */
+}
+
+nav ul li a:hover {
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background on hover */
+  border-radius: 25px; /* Add border-radius for a rounded appearance on hover */
+}
+
+/* Top section styling */
+.top-section {
+  margin-top: 70px;
+  margin-left: 100px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically within the flex container */
+}
+
+/* Styling for images in the top section */
+.top-section img {
+  display: block; /* Make the image a block-level element */
+  margin: 0 auto; /* Center-align the block-level element (the image) */
+}
+
+.top-section div {
+  flex: 1; /* Allow the text content to take up remaining space */
+}
+
+/* Add styling for h1 and p */
+h1 {
+  font-size: 40px; /* Adjust the font size as needed */
+  margin-bottom: 10px; /* Adjust the margin as needed */
+  font-family: "Segoe UI", sans-serif;
+  color: #7c5ee7; /* Text color */
+}
+
+p {
+  font-size: 20px; /* Adjust the font size as needed */
+  margin-bottom: 16px; /* Adjust the margin as needed */
+}
+
+.infographic-section h2 {
+  text-align: justify;
+  margin-left: 15px;
+  text-decoration: underline;
+}
+/* Button container alignment */
+.button-container {
+  align-items: center; /* Center items horizontally within the container */
+  margin-top: 50px;
+}
+
+/* Button styling */
+.button-34 {
+  margin-right: 15px;
+}
+.button-89 {
+  margin-left: 15px;
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start on smaller screens */
+  }
+
+  .top-section img {
+    max-width: 100%; /* Ensure the image takes full width on smaller screens */
+    margin-bottom: 10px; /* Add space between image and text/buttons on smaller screens */
+  }
+
+  .text-and-buttons {
+    max-width: 100%; /* Ensure text and buttons take full width on smaller screens */
+  }
+}
+
+/* Footer styling */
+footer {
+  color: rgb(137, 65, 231);
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0px 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+/* Infographic section styling */
+.infographic-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Adjust the max-width for the first subsection */
+.subsection:first-child {
+  max-width: 50%;
+}
+
+/* Paragraph and table styling in subsection */
+.subsection p {
+  text-align: justify;
+}
+
+.bordered {
+  margin: 2px;
+  padding: 0px 10px;
+  border-radius: 20px;
+  background-color: rgb(143, 113, 179);
+  color: #fbf5f5;
+}
+
+/* Add this CSS to left-align text inside table cells */
+table {
+  margin-top: 45px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 2px; /* Optional: Add padding for better appearance */
+}
+
+/* Section title styling */
+.section__title {
+  margin-bottom: 0px;
+}
+
+/* Education section styling */
+.education-section {
+  display: grid;
+  grid-template-columns: repeat(1fr, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/* Havana and Seneca styling */
+.havana,
+.seneca {
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Havana styling */
+.havana {
+  background-color: rgb(53, 50, 50);
+}
+
+/* Seneca styling */
+.seneca {
+  background-color: darkslateblue;
+}
+
+.education-section h2 {
+  color: rgb(223, 196, 245);
+}
+
+/* Contact section styling */
+.contact-section {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 500px;
+  left: 50%;
+  margin-left: -250px;
+  box-shadow: 0 0 20px 0 #999;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Form styling within the contact section */
+form {
+  margin: 35px;
+}
+
+/* Input field styling */
+.input-field {
+  width: 400px;
+  height: 40px;
+  margin-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #777;
+  border-radius: 15px;
+  outline: none;
+  text-align: center;
+}
+
+/* Text area field styling */
+.text-area-field {
+  width: 400px;
+  height: 150px;
+  margin-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #777;
+  border-radius: 15px;
+  outline: none;
+}
+
+#city {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1px;
+  box-sizing: border-box;
+}
+
+#contactForm label.field {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgb(138, 88, 196);
+}
+
+.options {
+  text-align: center;
+}
