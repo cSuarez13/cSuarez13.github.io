@@ -76,7 +76,7 @@ img {
   border-radius: 999px; /* Circular border radius */
   box-shadow: #5e5df0 0 10px 20px -10px; /* Box shadow for a subtle lift effect */
   box-sizing: border-box;
-  color: #ffffff; /* Text color */
+  color: #fffbfb; /* Text color */
   cursor: pointer;
   font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji,
     "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui,
@@ -472,6 +472,7 @@ form {
   max-width: 400px; /* Set a maximum width to avoid stretching on larger screens */
   margin: 10px 0; /* Adjust margin for spacing between input fields */
   box-sizing: border-box; /* Include padding and border in the element's total width */
+  height: 40px;
   border-radius: 20px;
 }
 
