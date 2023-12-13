@@ -228,13 +228,14 @@ nav ul li a:hover {
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   nav {
     padding: 2vw; /* Adjusted padding for even smaller screens */
   }
 
   nav .logo {
     padding: 3vw 1vw; /* Further adjusted padding for smaller screens */
+    font-size: 3vw; /* Font size for the logo */
   }
 
   nav ul {
@@ -306,12 +307,17 @@ p {
 @media (max-width: 768px) {
   .top-section {
     flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: flex-start; /* Align items to the start on smaller screens */
+    align-items: center; /* Center items horizontally on smaller screens */
+    margin-left: 0vw;
   }
 
   .top-section img {
     max-width: 100%; /* Ensure the image takes full width on smaller screens */
     margin-bottom: 10px; /* Add space between image and text/buttons on smaller screens */
+  }
+
+  .top-section div {
+    text-align: center; /* Center text content */
   }
 
   .text-and-buttons {
@@ -377,6 +383,27 @@ td {
   margin-bottom: 0px;
 }
 
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .infographic-section {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally on smaller screens */
+  }
+
+  .subsection:first-child {
+    max-width: 100%;
+  }
+
+  table {
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+
+  .infographic-section h2 {
+    text-align: center;
+  }
+}
+
 /* Education section styling */
 .education-section {
   display: grid;
@@ -410,60 +437,61 @@ td {
   color: rgb(223, 196, 245);
 }
 
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .havana,
+  .seneca {
+    max-width: 90%; /* Adjust max-width for smaller screens */
+  }
+}
+
 /* Contact section styling */
 .contact-section {
-  margin-top: 30px;
+  margin-top: 30px !important;
   margin-bottom: 50px;
-  width: 500px;
-  left: 50%;
-  margin-left: -250px;
+  width: 100%; /* Set the width to 100% for responsiveness */
+  max-width: 500px; /* Set a maximum width to avoid stretching on larger screens */
+  margin: 0 auto; /* Center the contact section horizontally */
   box-shadow: 0 0 20px 0 #999;
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px; /* Adjust padding for spacing inside the contact section */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  border-radius: 20px;
 }
 
 /* Form styling within the contact section */
 form {
-  margin: 35px;
+  margin: 20px 0; /* Adjust margin for spacing inside the form */
 }
 
 /* Input field styling */
-.input-field {
-  width: 400px;
-  height: 40px;
-  margin-top: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 1px solid #777;
-  border-radius: 15px;
-  outline: none;
-  text-align: center;
+.input-field,
+.text-area-field,
+#city {
+  width: 100%; /* Set the width to 100% for responsiveness */
+  max-width: 400px; /* Set a maximum width to avoid stretching on larger screens */
+  margin: 10px 0; /* Adjust margin for spacing between input fields */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  border-radius: 20px;
 }
 
-/* Text area field styling */
+.input-field,
 .text-area-field {
-  width: 400px;
-  height: 150px;
-  margin-top: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 1px solid #777;
-  border-radius: 15px;
-  outline: none;
+  height: 40px; /* Adjust height for input fields */
+  border-radius: 20px;
+}
+
+.text-area-field {
+  height: 150px; /* Adjust height for the text area */
 }
 
 #city {
-  width: 100%;
   padding: 10px;
-  margin-bottom: 1px;
-  box-sizing: border-box;
 }
 
 #contactForm label.field {
   display: block;
-  margin-top: 5px;
-  margin-bottom: 1px;
+  margin: 10px 0; /* Adjust margin for spacing between labels */
   text-align: center;
   font-weight: bold;
   font-size: 24px;
