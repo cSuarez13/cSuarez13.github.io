@@ -480,10 +480,12 @@ form {
 .text-area-field {
   height: 40px; /* Adjust height for input fields */
   border-radius: 20px;
+  text-align: center;
 }
 
 .text-area-field {
   height: 150px; /* Adjust height for the text area */
+  padding: 10px;
 }
 
 #city {
