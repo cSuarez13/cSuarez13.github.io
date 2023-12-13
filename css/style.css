@@ -230,24 +230,25 @@ nav ul li a:hover {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   nav {
-    padding: 10px; /* Adjust padding for even smaller screens */
+    padding: 2vw; /* Adjusted padding for even smaller screens */
   }
 
   nav .logo {
-    padding: 22px 5px; /* Further adjust padding for smaller screens */
+    padding: 3vw 1vw; /* Further adjusted padding for smaller screens */
   }
 
   nav ul {
-    justify-content: flex-end; /* Align links to the right on smaller screens */
+    justify-content: flex-end;
   }
 
   nav ul li {
-    margin-right: 5px; /* Further reduce space between links on smaller screens */
-    margin-bottom: 5px; /* Add space between rows of links on smaller screens */
+    margin-right: 1vw; /* Further reduced margin for smaller screens */
+    margin-bottom: 1vw; /* Adjusted margin between rows for smaller screens */
   }
 
   nav ul li a {
-    padding: 10px; /* Further adjust padding for even smaller screens */
+    padding: 1vw 2vw; /* Further adjusted padding for even smaller screens */
+    font-size: 2vw; /* Further adjusted font size for even smaller screens */
   }
 }
 
