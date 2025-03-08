@@ -69,7 +69,7 @@ export default function Contact() {
 
     try {
       // Use environment variable for Formspree endpoint
-      const formspreeEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || 'https://formspree.io/f/your-formspree-id';
+      const formspreeEndpoint = 'https://formspree.io/f/xeoajrwr';
       
       const response = await fetch(formspreeEndpoint, {
         method: 'POST',
