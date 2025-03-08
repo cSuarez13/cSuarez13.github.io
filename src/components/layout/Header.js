@@ -50,7 +50,7 @@ const Header = () => {
           <div className="flex-shrink-0 flex items-center">
             <div className="w-12 h-12 rounded-full overflow-hidden mr-3 border-2 border-purple-400 dark:border-purple-600 shadow-sm">
               <Image 
-                src="/images/myImg.jpg" 
+                src="/images/myIMG.jpg" 
                 alt="Claudia's Avatar" 
                 width={48} 
                 height={48} 

@@ -41,7 +41,7 @@ const Hero = () => {
           {/* Small avatar above name */}
           <div className="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-purple-300 dark:border-purple-700 shadow-lg">
             <Image 
-              src="/images/myImg.jpg" 
+              src="/images/myIMG.jpg" 
               alt="Claudia's Avatar" 
               width={96} 
               height={96} 
