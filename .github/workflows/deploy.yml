@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: write  # This is important for allowing the action to push to gh-pages
+
 jobs:
   deployment:
     runs-on: ubuntu-latest
@@ -32,4 +35,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          cname: csuarez13.github.io
