@@ -41,7 +41,7 @@ export const experienceData = {
       type: 'work',
       title: 'IT Service Desk Co-op',
       subtitle: 'Seneca Polytechnic',
-      date: 'January 2023 - August 2023',
+      date: 'September 2024 - December 2024',
       description: 'Provided comprehensive technical support for students, faculty, and staff across multiple campuses. Troubleshot and resolved hardware, software, and network issues to ensure smooth academic operations.',
       icon: <Briefcase size={20} />,
       highlights: [
