@@ -49,7 +49,7 @@ const Footer = () => {
               <div className="flex items-center text-dark-600 dark:text-dark-300">
                 <Linkedin size={16} className="mr-2 text-purple-600 dark:text-purple-400" />
                 <a 
-                  href="https://linkedin.com/in/claudia-suarez" 
+                  href="https://www.linkedin.com/in/claudia-suarez-a27b09265" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200"
