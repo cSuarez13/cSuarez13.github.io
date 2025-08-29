@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 import ProjectsFilter from "../components/projects/ProjectsFilter";
 import ProjectsGrid from "../components/projects/ProjectsGrid";
 import ProjectDetailModal from "../components/projects/ProjectDetailModal";
-import { projectCategories, getFilteredProjects } from "../data/projects";
+import { projectCategories, getFilteredProjects } from "../data/projectsData";
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("all");
