@@ -8,6 +8,7 @@ export const projectCategories = [
   { id: "desktop", name: "Desktop Applications" },
   { id: "game", name: "Game Development" },
   { id: "research", name: "Research & Data Science" },
+  { id: "literary", name: "Literary Analysis" },
 ];
 
 export const projects = [
@@ -62,53 +63,49 @@ export const projects = [
     description:
       "A comprehensive full-stack web application designed to streamline food bank operations by connecting donors, volunteers, recipients, and administrators in an efficient digital ecosystem.",
     fullDescription:
-      "ByteBasket addresses food insecurity challenges by providing a complete digital platform for food bank operations. The application features multi-role authentication, real-time inventory management, donation tracking, volunteer coordination, and recipient request processing with dietary restriction matching.",
+      "ByteBasket revolutionizes food bank management through an intuitive web platform that coordinates all stakeholders. Built with modern web technologies, it features role-based access control, real-time inventory tracking, volunteer scheduling, and comprehensive reporting systems for enhanced operational efficiency.",
     image: "/images/projects/bytebasket.jpg",
     category: "web",
     technologies: [
-      "React.js",
+      "React",
       "Node.js",
       "Express.js",
       "PostgreSQL",
-      "Sequelize ORM",
       "JWT Authentication",
-      "Tailwind CSS",
-      "Docker",
-      "GitHub Actions",
+      "Bootstrap",
+      "Stripe API",
+      "Socket.io",
     ],
     keyFeatures: [
-      "Multi-role user authentication and authorization system",
-      "Real-time inventory management with low-stock alerts",
-      "Donation management with automated receipt generation",
-      "Volunteer coordination with shift scheduling",
-      "Request processing with dietary restriction matching",
-      "Role-specific dashboards with data visualization",
-      "Multi-language support (English, French, Spanish)",
+      "Multi-role dashboard system (Admin, Donor, Volunteer, Recipient)",
+      "Real-time inventory management and tracking",
+      "Integrated volunteer scheduling and coordination",
+      "Secure donation processing with Stripe integration",
+      "Comprehensive reporting and analytics dashboard",
+      "Responsive design optimized for all device types",
     ],
     techHighlights: [
-      "Full-stack architecture with RESTful API design",
-      "Scalable database schema supporting multiple user roles",
-      "Responsive design optimized for mobile and desktop",
-      "CI/CD pipeline with automated testing and deployment",
-      "Comprehensive security measures and input validation",
-      "Designed to serve 500+ concurrent users",
+      "Full-stack JavaScript development with PERN stack",
+      "Role-based authentication and authorization system",
+      "Real-time data synchronization with Socket.io",
+      "Payment gateway integration with secure transactions",
+      "Database optimization with complex relational queries",
+      "Modern responsive UI/UX design principles",
     ],
     github: "https://github.com/cSuarez13/ByteBasket",
     liveLink: "https://frontend3-brown.vercel.app/",
     developmentPeriod: "4 months",
-    teamSize: "Team Lead of 5-member team",
-    role: "Team Leader & Full-Stack Developer",
-    impact:
-      "Designed to improve operational efficiency across multiple food bank locations",
+    teamSize: "Team of 4",
+    role: "Full-Stack Developer & Team Lead",
   },
   {
     id: "fragments",
     title: "Fragments Microservice",
-    subtitle: "Cloud-Based Data Management System",
+    subtitle: "Cloud-Native Data Processing Platform",
     description:
-      "A comprehensive cloud-based microservice designed for a Canadian manufacturing company to handle small text and image fragments with real-time format conversion capabilities.",
+      "An enterprise-grade microservice for managing and converting various data formats including text, images, and structured data with AWS cloud integration and comprehensive authentication.",
     fullDescription:
-      "The Fragments Microservice is an enterprise-grade solution supporting multiple data formats including plain text, Markdown, HTML, CSV, JSON, YAML, and various image formats. Built with scalable AWS architecture, it features multi-level authentication, fragment versioning, and advanced search functionality.",
+      "The Fragments Microservice is an enterprise-grade solution supporting multiple data formats including plain text, Markdown, HTML, CSV, JSON, YAML, and various image formats. Built with scalable AWS architecture, it features multi-level authentication, fragment versioning, and advanced search functionality with 95%+ test coverage.",
     image: "/images/projects/fragments.jpg",
     category: "cloud",
     technologies: [
@@ -152,7 +149,7 @@ export const projects = [
     description:
       "A comprehensive hotel management desktop application featuring dual interfaces: a customer-facing kiosk for self-service bookings and an administrative dashboard for hotel staff management.",
     fullDescription:
-      "Built with Java and JavaFX, this system handles complete hotel operations from room booking to checkout with integrated billing and reporting. Features include multi-room booking support, real-time availability checking, automated billing with tax calculations, and network-enabled remote administration.",
+      "Built with Java and JavaFX, this system handles complete hotel operations from room booking to checkout with integrated billing and reporting. Features include multi-room booking support, real-time availability checking, automated billing with tax calculations, and network-enabled remote administration capabilities.",
     image: "/images/projects/hotel.jpg",
     category: "desktop",
     technologies: [
@@ -163,6 +160,7 @@ export const projects = [
       "SQLite",
       "CSS",
       "Socket Programming",
+      "MVC Architecture",
     ],
     keyFeatures: [
       "Self-service kiosk interface with touch-friendly UI",
@@ -170,7 +168,7 @@ export const projects = [
       "Multi-room booking system with guest distribution",
       "Real-time room availability with date-based filtering",
       "Integrated billing system with tax calculations",
-      "Reporting module for hotel analytics",
+      "Comprehensive reporting module for hotel analytics",
       "Remote administration with network-enabled server",
     ],
     techHighlights: [
@@ -189,8 +187,6 @@ export const projects = [
     businessImpact:
       "Demonstrates enterprise-level application development for hospitality industry",
   },
-
-  // ADDITIONAL PROJECTS FOR SPECIFIC ROLES
   {
     id: "kaleidoscope",
     title: "Kaleidoscope",
@@ -198,16 +194,17 @@ export const projects = [
     description:
       "An innovative 3D puzzle-platformer where players restore a colorless world through dynamic color manipulation mechanics, featuring revolutionary gameplay and comprehensive business planning.",
     fullDescription:
-      "Led a 3-person team through complete game development lifecycle from concept to working prototype. Created revolutionary color-mixing shrine systems with procedural animations, achieved 79% polygon optimization while maintaining visual fidelity, and developed a comprehensive business plan with market research and financial projections.",
+      "Led a 3-person team through complete game development lifecycle from concept to working prototype. Created revolutionary color-mixing shrine systems with procedural animations, achieved 79% polygon optimization while maintaining visual fidelity, and developed a comprehensive business plan with market research and financial projections targeting the accessibility-focused gaming market.",
     image: "/images/projects/kaleidoscope.jpg",
     category: "game",
     technologies: [
       "Unity Engine",
+      "C#",
       "Blender",
       "Python",
-      "C#",
       "UV Mapping",
       "Procedural Generation",
+      "3D Modeling",
     ],
     keyFeatures: [
       "Revolutionary color manipulation physics system",
@@ -240,34 +237,34 @@ export const projects = [
     description:
       "A comprehensive movie information web application that allows users to discover, manage, and review movies with real-time search and personalized collections.",
     fullDescription:
-      "PopcornBuddy provides a seamless experience for movie enthusiasts to browse trending films, manage personal collections, and engage with content. Features secure authentication, real-time search, and integration with The Movie Database API.",
+      "PopcornBuddy provides a seamless experience for movie enthusiasts to browse trending films, manage personal collections, and engage with content. Features secure authentication, real-time search capabilities, and comprehensive integration with The Movie Database API for up-to-date movie information and recommendations.",
     image: "/images/projects/popcorn-buddy.jpg",
     category: "web",
     technologies: [
-      "Next.js",
       "React",
-      "MongoDB",
       "Node.js",
-      "JWT",
-      "Tailwind CSS",
-      "TMDB API",
-      "Vercel",
+      "Express.js",
+      "MongoDB",
+      "The Movie Database API",
+      "JWT Authentication",
+      "Material-UI",
+      "Axios",
     ],
     keyFeatures: [
-      "Movie discovery with trending, popular, and top-rated categories",
-      "User authentication with JWT-based security",
-      "Personal collections (favorites and watchlists)",
-      "Real-time search with instant results",
-      "User review and rating system",
-      "Fully responsive design for all devices",
+      "Real-time movie search and discovery functionality",
+      "Personal movie collections and customizable watchlists",
+      "User reviews and comprehensive rating system",
+      "Trending movies with personalized recommendations",
+      "Detailed movie information with cast and crew details",
+      "Fully responsive design for mobile and desktop platforms",
     ],
     techHighlights: [
-      "Next.js full-stack development with API routes",
-      "MongoDB complex schemas with nested arrays",
-      "JWT authentication with refresh token mechanism",
-      "Real-time TMDB API integration",
-      "Responsive UI with Tailwind CSS",
-      "Deployed on Vercel with environment configuration",
+      "RESTful API design and implementation",
+      "Third-party API integration with efficient data processing",
+      "User authentication and secure session management",
+      "NoSQL database design and query optimization",
+      "Modern React development with functional components and hooks",
+      "Material Design implementation with custom theming",
     ],
     github: "https://github.com/mikeylim/PopcornBuddy",
     liveLink: "https://popcornbuddy.vercel.app/",
@@ -277,52 +274,53 @@ export const projects = [
   },
   {
     id: "lost-item-app",
-    title: "LostItem Android App",
-    subtitle: "Community-Based Lost & Found Platform",
+    title: "Lost Item Tracker",
+    subtitle: "Android Mobile Application",
     description:
-      "A native Android application that connects people who have lost items with those who have found them, featuring location mapping and direct communication.",
+      "A comprehensive Android application for reporting and tracking lost items with location services, real-time notifications, and community-based recovery system.",
     fullDescription:
-      "This comprehensive mobile application provides a platform for reporting lost items with location data, photos, and contact information. Features interactive Google Maps integration, offline-first architecture, and cross-app SMS communication.",
+      "The Lost Item Tracker is a full-featured Android application that helps users report lost items and connect with finders in their community. Built with Java and Android SDK, it features GPS integration for location tracking, push notifications for match alerts, and a user-friendly interface for seamless item reporting and recovery coordination.",
     image: "/images/projects/lost-item.jpg",
     category: "mobile",
     technologies: [
-      "Kotlin",
+      "Java",
       "Android SDK",
-      "Room Database",
-      "Google Maps API",
       "SQLite",
-      "Android Studio",
+      "Google Maps API",
+      "Firebase",
+      "Material Design",
+      "GPS Location Services",
     ],
     keyFeatures: [
-      "Item reporting with detailed information and photos",
-      "Interactive Google Maps with location markers",
-      "Search and browse functionality with filtering",
-      "One-tap SMS messaging for direct communication",
-      "Photo documentation for item verification",
-      "Offline-first architecture with local storage",
+      "Intuitive lost item reporting with photo uploads",
+      "GPS-based location tracking and mapping",
+      "Real-time push notifications for potential matches",
+      "Community-driven item recovery system",
+      "Secure user authentication and profile management",
+      "Advanced search and filtering capabilities",
     ],
     techHighlights: [
-      "Native Android development with Kotlin",
-      "Room database for offline data persistence",
-      "Google Maps integration with custom markers",
-      "Geocoder implementation for address-to-GPS conversion",
-      "Cross-app SMS integration using Android intents",
-      "Custom ListView adapters for efficient data presentation",
+      "Native Android development with Java",
+      "Integration with Google Maps for location visualization",
+      "SQLite database for local data storage and caching",
+      "Firebase backend for real-time data synchronization",
+      "Material Design principles for intuitive user experience",
+      "GPS services for accurate location tracking",
     ],
     github: "https://github.com/cSuarez13/LostItem_AndroidApp",
     videoDemo: "https://youtu.be/MQ-g0DGq-gM",
     developmentPeriod: "2 months",
     teamSize: "Individual Project",
-    role: "Android Developer & UI/UX Designer",
+    role: "Mobile Developer & UI/UX Designer",
   },
   {
-    id: "covid-model",
-    title: "COVID-19 Transmission Simulation",
-    subtitle: "Epidemiological Research Model",
+    id: "covid-simulation",
+    title: "COVID-19 Simulation Model",
+    subtitle: "Advanced Epidemiological Modeling System",
     description:
-      "A sophisticated stochastic simulation model to predict COVID-19 pandemic evolution in local municipalities using the advanced SIDARTHE compartmental framework.",
+      "A sophisticated Monte Carlo simulation model for COVID-19 transmission dynamics, designed for public health decision-making with high statistical accuracy.",
     fullDescription:
-      "Developed for local public health authorities, this model differentiates between diagnosed/undetected cases and categorizes infections by symptom severity. Achieved highly accurate predictions with relative errors under 1% when validated against real epidemiological data from Cárdenas municipality (154,204 population).",
+      "Developed for local public health authorities, this model differentiates between diagnosed/undetected cases and categorizes infections by symptom severity. Achieved highly accurate predictions with relative errors under 1% when validated against real epidemiological data from Cárdenas municipality (154,204 population). The model successfully estimated over 1,000 undetected COVID-19 cases.",
     image: "/images/projects/covid-simulation.jpg",
     category: "research",
     technologies: [
@@ -332,22 +330,23 @@ export const projects = [
       "Microsoft Excel",
       "Monte Carlo Simulation",
       "Statistical Analysis",
+      "Pandas",
     ],
     keyFeatures: [
       "SIDARTHE compartmental model with 8-state population dynamics",
-      "Monte Carlo simulation for uncertainty modeling",
-      "Parameter estimation using real-world data",
-      "Statistical validation with normality testing",
-      "Geographic positioning with uniform distribution",
-      "Policy impact assessment capabilities",
+      "Monte Carlo simulation for uncertainty modeling and analysis",
+      "Parameter estimation using real-world epidemiological data",
+      "Statistical validation with comprehensive normality testing",
+      "Geographic positioning with uniform distribution modeling",
+      "Policy impact assessment capabilities for public health decisions",
     ],
     techHighlights: [
-      "Advanced statistical computing with Python",
+      "Advanced statistical computing with Python ecosystem",
       "Stochastic simulation using probability distributions",
       "Model validation achieving 0.022% relative error for cases",
       "Sensitivity analysis through 50-simulation averaging",
-      "Integration with real epidemiological data",
-      "Scalable framework for different geographic regions",
+      "Integration with real epidemiological data sources",
+      "Scalable framework adaptable to different geographic regions",
     ],
     developmentPeriod: "4 months",
     teamSize: "Individual Research Project",
@@ -359,6 +358,9 @@ export const projects = [
 
 // Helper function to get filtered projects
 export const getFilteredProjects = (categoryId) => {
+  if (!projects || !Array.isArray(projects)) {
+    return [];
+  }
   if (categoryId === "all") {
     return projects;
   }
@@ -367,6 +369,9 @@ export const getFilteredProjects = (categoryId) => {
 
 // Helper function to get project by ID
 export const getProjectById = (id) => {
+  if (!projects || !Array.isArray(projects)) {
+    return null;
+  }
   return projects.find((project) => project.id === id);
 };
 

@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import {
   ExternalLink,
@@ -14,6 +13,7 @@ import { useInView } from "react-intersection-observer";
 
 const ProjectCard = ({
   title,
+  subtitle,
   description,
   image,
   technologies,
@@ -25,6 +25,8 @@ const ProjectCard = ({
   category,
   index,
   inProgress,
+  onClick,
+  project,
 }) => {
   // Set up the intersection observer with a threshold of 0.1 (10% visible)
   const [ref, inView] = useInView({
@@ -40,10 +42,11 @@ const ProjectCard = ({
   return (
     <div
       ref={ref}
-      className={`bg-white dark:bg-dark-800 rounded-lg shadow-md overflow-hidden transition-all duration-500 transform ${
+      className={`bg-white dark:bg-dark-800 rounded-lg shadow-md overflow-hidden transition-all duration-500 transform cursor-pointer ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       } group hover:shadow-xl flex flex-col md:flex-row w-full mb-8`}
       style={{ transitionDelay: `${delay}s` }}
+      onClick={() => onClick && onClick(project)}
     >
       {/* Project Image (Left side) */}
       <div className="relative md:w-2/5 h-60 md:h-auto overflow-hidden">
@@ -67,25 +70,38 @@ const ProjectCard = ({
 
       {/* Content (Right side) */}
       <div className="p-6 md:w-3/5 flex flex-col">
-        <h3 className="text-xl font-bold text-dark-800 dark:text-white mb-3">
+        <h3 className="text-xl font-bold text-dark-800 dark:text-white mb-2">
           {title}
         </h3>
+
+        {subtitle && (
+          <h4 className="text-lg text-purple-600 dark:text-purple-400 font-semibold mb-3">
+            {subtitle}
+          </h4>
+        )}
 
         <p className="text-dark-600 dark:text-dark-300 mb-4 line-clamp-3 flex-grow">
           {description}
         </p>
 
         {/* Technologies */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {technologies.map((tech, i) => (
-            <span
-              key={i}
-              className="text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-2 py-1 rounded-full"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
+        {technologies && technologies.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {technologies.slice(0, 6).map((tech, i) => (
+              <span
+                key={i}
+                className="text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-2 py-1 rounded-full"
+              >
+                {tech}
+              </span>
+            ))}
+            {technologies.length > 6 && (
+              <span className="text-xs font-medium bg-dark-100 dark:bg-dark-700 text-dark-600 dark:text-dark-400 px-2 py-1 rounded-full">
+                +{technologies.length - 6} more
+              </span>
+            )}
+          </div>
+        )}
 
         {/* Links */}
         <div className="mt-auto flex flex-wrap gap-3">
@@ -164,4 +180,53 @@ const ProjectCard = ({
   );
 };
 
-export default ProjectCard;
+// Main ProjectsGrid component
+const ProjectsGrid = ({ projects = [], onProjectClick }) => {
+  // Add safety check for projects array
+  if (!projects || !Array.isArray(projects)) {
+    return (
+      <div className="text-center py-12">
+        <p className="text-dark-600 dark:text-dark-300 text-lg">
+          No projects available at the moment.
+        </p>
+      </div>
+    );
+  }
+
+  if (projects.length === 0) {
+    return (
+      <div className="text-center py-12">
+        <p className="text-dark-600 dark:text-dark-300 text-lg">
+          No projects found in this category. More coming soon!
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-8">
+      {projects.map((project, index) => (
+        <ProjectCard
+          key={project.id}
+          project={project}
+          title={project.title}
+          subtitle={project.subtitle}
+          description={project.description}
+          image={project.image}
+          technologies={project.technologies}
+          github={project.github}
+          githubUI={project.githubUI}
+          liveLink={project.liveLink}
+          videoDemo={project.videoDemo}
+          driveLink={project.driveLink}
+          category={project.category}
+          index={index}
+          inProgress={project.inProgress}
+          onClick={onProjectClick}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default ProjectsGrid;
