@@ -184,7 +184,7 @@ export const projects = [
       "Comprehensive validation and transaction management",
       "Multi-threaded client-server architecture",
     ],
-    github: "https://github.com/cSuarez13/APD_Final_Project",
+    github: "https://github.com/cSuarez13/Hotel_Management_Desktop_App",
     videoDemo: "https://youtu.be/KbA_9wrV6vc",
     developmentPeriod: "3 months",
     teamSize: "Team of 3",
